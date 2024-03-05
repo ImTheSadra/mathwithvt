@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node2" appversion="6.1.14" apprev="18105">
+  <panorama id="node2">
+    <input height="628" levelbiashidpi="1.000" overlap="1" leveltilesize="510" levelbias="0.400" leveltileurl="/assest/levels/3/2/tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" width="628" levelingroll="0">
+      <level height="628" preload="0" predecode="0" width="628"/>
+      <level height="314" preload="1" predecode="1" width="314"/>
+      <preview color="0x808080" strip="1"/>
+    </input>
+    <view fovmode="0" pannorth="0">
+      <start projection="4" fov="70" tilt="0" pan="0"/>
+      <flyin projection="9" fov="170" tilt="-90" pan="0"/>
+      <min fovpixel="2" tilt="-57.508" pan="-180"/>
+      <max fovstereographic="270" fovfisheye="360" fov="120" tilt="57.508" pan="180"/>
+    </view>
+    <userdata info="" longitude="" nodeid="node2" latitude="" description="" tags="google.maps" copyright="" datetime="" author="" source="" title="" heading="0" customnodeid="" comment=""/>
+    <hotspots height="20" wordwrap="1" width="180">
+      <label height="20" backgroundalpha="1" enabled="1" textcolor="0x000000" backgroundcolor="0xffffff" borderradius="1" wordwrap="1" bordercolor="0x000000" borderalpha="1" width="180" textalpha="1" border="1" background="1"/>
+      <polystyle backgroundalpha="0.25098" handcursor="1" mode="0" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomin="0" enabled="1" softedge="0" zoomafterinfov="90" blendtime="1" zoomfov="20" blendcolor="0x000000" zoomafteroutfov="20" zoomspeed="2" zoomout="0" zoomoutpause="1"/>
+    <animation syncanimationwithvideo="0" animsequence="Animation01" useinautorotation="0"/>
+    <control lockedkeyboard="0" lockedwheel="0" dblclickfullscreen="0" contextprojections="0" simulatemass="1" contextvr="1" rubberband="0" invertwheel="0" contextfullscreen="1" hideabout="0" speedwheel="1" sensitivity="8" lockedmouse="0" lockedkeyboardzoom="0" invertcontrol="1"/>
+  </panorama>
+  <masternode>
+    <userdata info="" longitude="" nodeid="master" latitude="" description="" tags="" copyright="" datetime="" author="" source="" title="" heading="0" customnodeid="" comment=""/>
+  </masternode>
+</tour>

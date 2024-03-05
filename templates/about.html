@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block head %}
+<style>
+    .link {
+        color: white;
+    }
+    .link:hover {
+        text-decoration: none;
+    }
+
+    .cbtn {
+        background-color: rgb(101, 50, 101);
+        border-radius: 12px;
+        border: purple solid 1px;
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block content %}
+    <input type="hidden" id="phoneNumber" value="09109642551">
+    <div style="text-align: center;" class="text-bg">
+        <div class="img-bg" style="float: right;">
+            <img src="/assest/qr-code.png" width="10%">
+        </div>
+        <div>
+            <h2>سلام امیدوارم از بازی لذت ببری</h2>
+            <h2>این بازی شامل چند مرحله گردشگری است که</h2>
+            <h2>در هر تور سوالات مختلف مسابقات تیمز در ریاضب نهم پرسیده میشود</h2>
+            <h2>که در محیط برنامه نویسی پایتون به صورت جذاب و مخاطب پسند در قالب وب طراحی شده است</h2>
+            <br>
+            <br>
+            <h2>طراح گرافیک و ایده پرداز :‌ سپهر طاهرخانی</h2>
+            <h2>برنامه نویس : محمد صدرا گرجی</h2>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="text-center">
+        <button class="cbtn" onclick="copyphone()">تلفن</button>
+        <a href="mailto:m.sadra.gorji@gmail.com"><button class="cbtn">پست الکترونیک</button></a>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        function copyphone(){
+            let input = document.getElementById("phoneNumber");
+            input.focus();
+            input.select();
+            document.execCommand("copy");
+            alert(input.value+"\nکپی شد.");
+        }
+    </script>
+{% endblock %}

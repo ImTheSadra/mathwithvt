@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Pano2VR project file  -->
+<pano2vrconfig rev="18105" version="6.1.14">
+  <tour>
+    <panorama>
+      <id>node1</id>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/code/files/360/takhtjamshid/24-03-03_20-06-30.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan/>
+        <tilt/>
+        <fov/>
+        <flyinstart/>
+        <pannorth>0</pannorth>
+      </viewingparameter>
+      <userdata>
+        <capturedatetime>2024-03-03T20:06:31</capturedatetime>
+        <tags>takhtjamshid</tags>
+      </userdata>
+      <floorplans/>
+      <hotspots/>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <sounds/>
+      <animation/>
+    </panorama>
+    <panorama>
+      <input>
+        <patch/>
+        <type>auto</type>
+        <filename>D:/code/files/360/takhtjamshid/24-03-03_20-06-30.png</filename>
+        <videotype>equi</videotype>
+        <levelpitch>0</levelpitch>
+        <levelroll>0</levelroll>
+      </input>
+      <viewingparameter>
+        <pan/>
+        <tilt/>
+        <fov/>
+        <flyinstart/>
+        <pannorth>0</pannorth>
+      </viewingparameter>
+      <userdata>
+        <capturedatetime>2024-03-03T20:07:47</capturedatetime>
+        <tags>takhtjamshid</tags>
+      </userdata>
+      <floorplans/>
+      <hotspots/>
+      <output/>
+      <streetview/>
+      <streetviewproject/>
+      <sounds/>
+      <id>node2</id>
+    </panorama>
+  </tour>
+  <panorama>
+    <id>master</id>
+    <input>
+      <patch/>
+    </input>
+    <viewingparameter>
+      <pan/>
+      <tilt/>
+      <fov/>
+      <flyinstart/>
+    </viewingparameter>
+    <userdata/>
+    <floorplans/>
+    <hotspots/>
+    <output>
+      <htmlcss>
+        <html>
+          <enabled>1</enabled>
+          <filename>D:/code/source/python/web/xarazmi/assest/levels/2/1/index.html</filename>
+          <values>
+            <value id="css"></value>
+            <value id="fitcover">false</value>
+            <value id="gginfo">false</value>
+            <value id="htmltitle">$(upt)</value>
+            <value id="jsxml">false</value>
+            <value id="parseanchor">false</value>
+          </values>
+        </html>
+        <facequality/>
+        <transition>
+          <zoomafterinfov>90</zoomafterinfov>
+          <zoomafteroutfov>20</zoomafteroutfov>
+        </transition>
+        <autorotate/>
+        <soundstransition/>
+        <flyintransition/>
+        <hotspottext/>
+        <hotspotstyle/>
+        <webvr/>
+        <tilesize>512</tilesize>
+        <filename>D:/code/source/python/web/xarazmi/assest/levels/2/1/pano.xml</filename>
+      </htmlcss>
+    </output>
+    <streetview/>
+    <streetviewproject/>
+    <sounds/>
+    <animation>
+      <title>Animation01</title>
+      <sequence/>
+    </animation>
+  </panorama>
+</pano2vrconfig>

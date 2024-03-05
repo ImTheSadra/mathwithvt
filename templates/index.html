@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <h1 style="text-align: center; color: white;">ریاضی با چاشنی تور مجازی</h1>
+        </div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row"><br></div>
+        <div class="row">
+        {% for level in levels %}
+            <div class="col levelCol text-center">
+                <a href="{% if level.lock %}#{% else %}/play/{{level.index}}{% endif %}">
+                    <button type="button" 
+                        {% if level.lock %}
+                            class="lock-btn"
+                        {% else %}
+                            class="unlock-btn"
+                        {% endif %}
+                    ><h3>مرحله {{level.name}}</h3><p>{{level.place}}</p></button>
+                </a>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+{% endblock %}

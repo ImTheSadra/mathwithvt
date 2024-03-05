@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% block head %}
+<style>
+    .content {
+        height: 70vh;
+    }
+    * {
+        color: white;
+    }
+</style>
+{% endblock %}
+{% block content %}
+    <h1 style="text-align: center; color: white;">مرحله {{level.name}}</h1>
+    {% if level.lock %}
+        <div class="text-center">    
+            <h3 style="color: red;">شرمنده این مرحله برای تو باز نشده. باید مراحل قبلی رو انجام بدی</h3>
+            <a href="/">
+                <button style="border: #333 solid 1px; border-radius: 12px; background-color: #333;">
+                    برگشت به خانه
+                </button>
+            </a>
+        </div>
+    {% else %}
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col text-center information col-lg-2">
+                    <div class="row">
+                        <h4><i id="place" style="font-style: normal;" class="fa-num"></i> <i class="fa-solid fa-location-dot"></i></h4>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <h4 id="answerd" class="fa-num"></h4>
+                        <h4 id="score" class="fa-num"></h4>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <h4 id="timer" class="fa-num"></h4>
+                    </div>
+                </div>
+                <div class="col" style="min-width: 60%;"><embed src="" id="vtDisplay" class="panoramaEmbed" height="90vh" width="100vh" type="text/html"></div>
+                <div class="col col-lg-2 quiz">
+                    <div class="container">
+                        <br>
+                        <div class="row"><h5 id="quiz-text" class="text-center fa-num"></h5></div>
+                        <br>
+                        <div id="answers" class="row text-center">
+                        </div>
+                        <br>
+                        <div class="row">
+                            <img src="" id="quiz-image" style="display: none;">
+                        </div>
+                        <div class="row text-center">
+                            <h5 id="result" class="fa-num"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="min-width: 30%; margin-left: 35%; margin-right: 35%;">
+                <!-- <p style="text-align: center;">موسیقی</p> -->
+                <div class="row"><h5 style="text-align: center; color: black;">موسیقی</h5></div>
+                <div class="text-center btn-group" style="min-width: 100%;" role="group">
+                    <button id="pause" class="btn btn-primary"><i class="fa-solid fa-pause"></i></button>
+                    <button id="play" class="btn btn-primary"><i class="fa-solid fa-play"></i></button>
+                    <button id="silent" class="btn btn-primary"><i class="fa-solid fa-volume-high"></i></i></button>
+                </div>
+            </div>
+            <br>
+        </div>
+        <audio src="/assest/music.mp3" id="music" style="display: none;"></audio>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/quiz.js"></script>
+<script>
+    setTimeout(()=>{
+        document.getElementById("music").play();
+        document.getElementById("music").onended = (ev)=>{document.getElementById("music").play();}
+        document.getElementById("pause").onclick = (ev)=>{
+            let music = document.getElementById("music");
+            music.pause();
+        }
+        document.getElementById("silent").onclick = (ev)=>{
+            let music = document.getElementById("music");
+            if (music.volume != 0) {
+                music.volume = 0;
+                document.getElementById("silent").innerHTML = '<i class="fa-solid fa-volume-off"></i>'
+            } else {
+                music.volume = 0.5;
+                document.getElementById("silent").innerHTML = '<i class="fa-solid fa-volume-high"></i>'
+            }
+        }
+        document.getElementById("play").onclick = (ev)=>{
+            document.getElementById("music").play();
+        }
+    }, 200)
+</script>
+{% endblock %}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node5" apprev="18105" appversion="6.1.14">
+  <panorama id="node5">
+    <input width="480" overlap="1" leveltileurl="/assest/levels/[level]/[part]/tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" height="480" levelbiashidpi="1.000" levelbias="0.400" leveltilesize="510" levelingpitch="0" levelingroll="0">
+      <level width="480" height="480" preload="1" predecode="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min tilt="-60.4952" fovpixel="2" pan="-180"/>
+      <max fov="120" tilt="60.4952" fovstereographic="270" fovfisheye="360" pan="180"/>
+    </view>
+    <userdata comment="" author="" heading="0" title="" datetime="" copyright="" description="" tags="Pano2VR6|Pictures" longitude="" customnodeid="" nodeid="node5" info="" source="" latitude=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label border="1" width="180" backgroundalpha="1" borderradius="1" bordercolor="0x000000" background="1" wordwrap="1" height="20" textcolor="0x000000" borderalpha="1" enabled="1" textalpha="1" backgroundcolor="0xffffff"/>
+      <polystyle mode="0" backgroundalpha="0.25098" bordercolor="0x0000ff" borderalpha="1" backgroundcolor="0x0000ff" handcursor="1"/>
+    </hotspots>
+    <media/>
+    <transition type="crossdissolve" zoomafteroutfov="20" blendtime="1" zoomafterinfov="90" zoomspeed="2" zoomfov="20" zoomoutpause="1" zoomin="0" zoomout="0" enabled="1" softedge="0" blendcolor="0x000000"/>
+    <animation animsequence="Animation01" syncanimationwithvideo="0" useinautorotation="0"/>
+    <control simulatemass="1" speedwheel="1" invertcontrol="1" hideabout="0" sensitivity="8" lockedmouse="0" lockedkeyboardzoom="0" dblclickfullscreen="0" rubberband="0" contextvr="1" contextprojections="0" lockedwheel="0" lockedkeyboard="0" invertwheel="0" contextfullscreen="1"/>
+  </panorama>
+  <masternode>
+    <userdata comment="" author="" heading="0" title="" datetime="" copyright="" description="" tags="" longitude="" customnodeid="" nodeid="master" info="" source="" latitude=""/>
+  </masternode>
+</tour>
