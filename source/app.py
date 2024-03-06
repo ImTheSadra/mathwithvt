@@ -2,8 +2,21 @@ from flask import *
 import json
 from .level import level as Level
 from .quiz import makeQuiz
+from hashlib import sha256
+from random import choice
 
 app = Flask("app")
+
+def genCode(length:int=10):
+    result = ""
+    letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    letters += letters.lower()
+    letters += "0123456789"
+
+    for i in range(length):
+        result += choice(letters)
+    
+    return sha256(result.encode()).hexdigest(), result
 
 @app.route("/favicon.ico")
 def favicon():
@@ -54,13 +67,21 @@ def assest(path):
 def playIndex():
     return render_template("index.html")
 
+codes = {}
+
 @app.route("/play/<int:level>")
 def play(level:int):
     res = make_response()
+
+    code, text = genCode()
+    while codes.get(code) != None:
+        code, text = genCode()
+    codes.setdefault(code, text)
+
     res, levels = check(request.cookies, res)
     _level = levels[level-1]
     level = Level(_level["name"], level, _level["lock"])
-    res.response = render_template("game.html", level=level)
+    res.response = render_template("game.html", level=level, code=code)
     return res
 
 @app.route("/quiz/<int:level>")
@@ -101,21 +122,12 @@ def vt(level:int, part:int):
     res.response = render_template("vt.html", level=level, part=part)
     return res
 
-@app.route("/vt.xml/<int:level>/<int:part>")
-def vtXml(level:int, part:int):
+@app.route("/win/<int:level>/<code>")
+def win(level:int, code:str):
     res = make_response()
-    result = ""
-    with open("./assest/pano.xml", "r") as f:
-        result = f.read()
-    result = result.replace("[level]", str(level))
-    result = result.replace("[part]",  str(part))
-    res.response = result
-    res.headers.add("Content-Type", "application/xml")
-    return res
-
-@app.route("/win/<int:level>")
-def win(level:int):
-    res = make_response()
+    if codes.get(code) == None:
+        return redirect("/")
+    codes.pop(code)
     if request.headers.get("Content-Type") == "application/json":
         res.response = json.dumps({"status": res.status_code, "win": True})
     else:

@@ -70,3 +70,7 @@ body {
     min-width: 100%;
     min-height: 100%;
 }
+
+.optionBtn {
+    margin-top: 1%;
+}

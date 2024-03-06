@@ -63,12 +63,18 @@
 				};
 				setTimeout(iosHfix,0);	
 				setTimeout(iosHfix,100);	
+				let text = document.createElement("h4");
+				text.innerText = "مرحله {{level}} - سوال {{part}}";
+				document.body.appendChild(text);
 				window.addEventListener("resize", function() {
 					setTimeout(iosHfix,0);
 					// hide toolbar on iPad happens with a delay
 					setTimeout(iosHfix,500);
 					setTimeout(iosHfix,1000);
 					setTimeout(iosHfix,2000);
+					let text = document.createElement("h4");
+					text.innerText = "مرحله {{level}} - سوال {{part}}";
+					document.body.appendChild(text);
 				});
 			}
 		</script>

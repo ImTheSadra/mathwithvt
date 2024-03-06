@@ -21,9 +21,12 @@
             </a>
         </div>
     {% else %}
+        <input type="hidden" value="{{code}}" id="code">
         <div class="container-fluid">
             <div class="row content">
                 <div class="col text-center information col-lg-2">
+                    <div class="row"><br></div>
+                    <div class="row"><br></div>
                     <div class="row">
                         <h4><i id="place" style="font-style: normal;" class="fa-num"></i> <i class="fa-solid fa-location-dot"></i></h4>
                     </div>
@@ -41,7 +44,7 @@
                         <h4 id="timer" class="fa-num"></h4>
                     </div>
                 </div>
-                <div class="col" style="min-width: 60%;"><embed src="" id="vtDisplay" class="panoramaEmbed" height="90vh" width="100vh" type="text/html"></div>
+                <div class="col" style="min-width: 60%;"><embed src="" id="vtDisplay" class="panoramaEmbed" width="100vh" type="text/html"></div>
                 <div class="col col-lg-2 quiz">
                     <div class="container">
                         <br>

@@ -103,7 +103,7 @@ class SubArray:
             t[i] = None
             while option in t or option == str(int(self.answer)):
                 option = str(int(randint(1,50)))
-            result["options"].append({"txt": option, "id": str(i)})
+            result["options"].append([option, str(i)])
 
         index = choice(range(len(result["options"])))
         result["options"][index][0] = str(int(self.answer))
